@@ -13,3 +13,4 @@ int i = 0;int j = 0;
 return noofpaths(i,j,m,n);
 }
 //time limit exceeds
+used memoriasation hun
