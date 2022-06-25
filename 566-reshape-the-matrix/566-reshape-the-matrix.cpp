@@ -12,15 +12,16 @@ public:
                 answer.push_back(mat[i][j]);
             }
         }
-        int j = 0;x = c;
-        for(int i = 0;i<r;i++){
-            vector<int> mem;
-            for( ;j<c;j++){
-                mem.push_back(answer[j]);
+        x = c;vector<int> mem;
+        for(int i = 0;i<answer.size();i++){
+            if(i==c){
+                c = (c+x);
+                ansi.push_back(mem);
+                mem.clear();
             }
-            ansi.push_back(mem);
-            c = (c+x);
+            mem.push_back(answer[i]);
         }
+        ansi.push_back(mem);
         return ansi;
     }
 };
